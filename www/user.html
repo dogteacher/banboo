@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- グローバルナビのカレント表示 -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- fontawesome -->
+    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="css/fontawesome.min.css" rel="stylesheet">
+    <link href="css/fa-regular.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/remodal.css">
+    <link rel="stylesheet" href="css/remodal-default-theme.css">
+    <!-- slicknav -->
+    <link rel="stylesheet" href="css/slicknav.min.css" />
+    <link href="../favicon.ico" rel="icon" type="image/x-icon" />
+</head>
+<body>
+<div id="wrapper">
+    <header id="container">
+        <div class="d-flex justify-content-between align-items-center pt-2 pb-2">
+            <a href="javascript:history.back()"><i class="fas fa-angle-left fz20"></i></a>
+            <a href="http://fuzokueigyo.pigee.jp/service-test/user/index.php" class="logo"><img src="img/logo.png" alt=""></a>
+            <a href="#"><img src="img/menu-bk.png" alt=""></a>
+        </div>
+    </header><div id="navi">
+    <ul id="menu" class="clearfix">
+        <li><a href="mypage-edit.php">ユーザー情報編集</a></li>
+        <li><a href="usage.php">利用履歴</a></li>
+        <li><a href="store.php">登録している店舗</a></li>
+        <li><a href="about.php">このサービスについて</a></li>
+        <li><a href="policy.php">個人情報の取扱について</a></li>
+        <li><a href="terms.php">利用規約</a></li>
+        <li><a href="login.php">ログアウト</a></li>
+    </ul>
+</div>
+    <div>
+        <main id="member">
+            <div class="wrap qr mb-3">
+                <p class="text-center fz15 lh13 mb-1">ストアページで会員証を提示してください。</p>
+                <img src="images/dummy/qr.png" alt="" class="img-fluid mt-2 mb-2 ml-auto mr-auto d-block w-50">
+                <p class="text-center fz25 font-weight-bold mb-1">01234567</p>
+                <p class="fz13 mb-3 text-center"><span class="ft-main">14:29</span>後、期限切れ</p>
+            </div>
+            <div class="bg-fff p-3 m-auto mt-3 w-75">
+                <p class="font-weight-bold fz18 mb-0">
+                    <a href="store-top.php">Bar Shinjuku</a>
+                </p>
+                <hr class="mt-1 mb-1"/>
+                <p class="fz16 mb-0">・ドリンク1杯無料</p>
+                <p class="fz16 mb-0">・シャンパン1杯無料</p>
+            </div>
+            <div class="pl-4 pr-4 mt-3">
+                <p class="fz13 mb-1">※時間を過ぎると自動的にキャンセルされます。</p>
+                <p class="fz13 mb-0">※予約や時間を確定する場合は、会員である旨を伝えてストアへ直接連絡して下さい。</p>
+            </div>
+            <footer>
+                <!-- <img src="images/dummy/ftr.png" class="img-fluid"> -->
+                <nav id="mainNav">
+                    <ul>
+                        <li class="home">
+                            <a href="home.php">ホーム</a>
+                        </li>
+                        <li class="search">
+                            <a href="search.php">探す</a>
+                        </li>
+                        <li class="member">
+                            <a href="index.php">会員証</a>
+                            <p class="icon">3</p>
+                        </li>
+                        <li class="mypage">
+                            <a href="mypage.php">マイページ</a>
+                        </li>
+                        <li class="like">
+                            <a href="like.php">お気に入り</a>
+                        </li>
+                    </ul>
+                </nav>
+            </footer></main>
+    </div><!-- /#wrapper -->
+    <script>
+        $(function(){
+            $('#mainNav li a').each(function(){
+                var $href = $(this).attr('href');
+                if(location.href.match($href)) {
+                    $(this).parent('li').addClass('current');
+                } else {
+                    $(this).parent('li').removeClass('current');
+                }
+            });
+        });
+    </script>
+
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script>
+        jQuery(function($){
+            $('#menu').slicknav();
+        });
+    </script>
+</body>
+</html>
