@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -43,4 +44,30 @@ var app = {
     }
 };
 
+
 app.initialize();
+
+/*
+google map 表示　EventListener
+ */
+// マップオブジェクトを控えておく変数
+var map = null;
+document.addEventListener('deviceready', function() {
+    // 対象の DOM 要素に Google マップを配置する
+    var mapElement = document.getElementById('map');
+    // マップの初期位置を表示する (座標は日本の中心あたりを適当に)
+    map = plugin.google.maps.Map.getMap(mapElement, {
+        camera: {
+            latLng: {
+                lat: 38.2586,
+                lng: 137.6850
+            },
+            zoom: 4
+        }
+    });
+
+    // マップが初期表示できる状態になったら何かする場合はこのように設定する
+    map.addEventListener(plugin.google.maps.event.MAP_READY, function() {
+        // ココに処理…
+    });
+}, false);

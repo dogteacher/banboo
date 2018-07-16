@@ -9,7 +9,17 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.banboo.main"
+    },
+    "cordova-plugin-googlemaps": {
+      "API_KEY_FOR_IOS": "AIzaSyA9Ku59QV2djxcynXIVLIzPyXd-5CGvXY0",
+      "LOCATION_WHEN_IN_USE_DESCRIPTION": "This app wants to get your location while this app runs only.",
+      "LOCATION_ALWAYS_USAGE_DESCRIPTION": "This app wants to get your location always, even this app runs in background.",
+      "PACKAGE_NAME": "com.banboo.main"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "com.googlemaps.ios": {
+      "PACKAGE_NAME": "com.banboo.main"
+    }
+  }
 }

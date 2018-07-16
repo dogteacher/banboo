@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.banboo.main"
+    },
+    "cordova-plugin-googlemaps": {
+      "PACKAGE_NAME": "com.banboo.main"
     }
   },
   "dependent_plugins": {}

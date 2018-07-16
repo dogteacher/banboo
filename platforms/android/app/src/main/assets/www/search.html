@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- グローバルナビのカレント表示 -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- fontawesome -->
+    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="css/fontawesome.min.css" rel="stylesheet">
+    <link href="css/fa-regular.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/remodal.css">
+    <link rel="stylesheet" href="css/remodal-default-theme.css">
+    <!-- slicknav -->
+    <link rel="stylesheet" href="css/slicknav.min.css" />
+    <link href="../favicon.ico" rel="icon" type="image/x-icon" />
+</head>
+<body>
+<div id="wrapper">
+    <header id="container">
+        <div class="d-flex justify-content-between align-items-center pt-2 pb-2">
+            <a href="javascript:history.back()"><i class="fas fa-angle-left fz20"></i></a>
+            <a href="http://fuzokueigyo.pigee.jp/service-test/user/index.php" class="logo"><img src="images/logo.png" alt=""></a>
+            <a href="#"><img src="images/menu-bk.png" alt=""></a>
+        </div>
+    </header><div id="navi">
+    <ul id="menu" class="clearfix">
+        <li><a href="mypage-edit.php">ユーザー情報編集</a></li>
+        <li><a href="usage.php">利用履歴</a></li>
+        <li><a href="store.php">登録している店舗</a></li>
+        <li><a href="about.php">このサービスについて</a></li>
+        <li><a href="policy.php">個人情報の取扱について</a></li>
+        <li><a href="terms.php">利用規約</a></li>
+        <li><a href="login.php">ログアウト</a></li>
+    </ul>
+</div>
+    <div>
+        <main id="search" class="search-list">
+            <div class="wrap">
+                <img src="images/dummy/map.png" alt="" class="img-fluid mb-4">
+                <div id="search-result">
+                    <div class="search-result-list">
+                        <div class="box innerBox cafe">
+                            <div class="thumb"></div>
+                            <div class="info">
+                                <p class="font-weight-bold fz14 mb-0"><span class="ft-main">★</span><a href="store-cafe.php">CAFE AOYAMA</a></p>
+                                <p class="fz13 mb-0">・ドリンク1杯無料</p>
+                                <p class="fz13 mb-1">・シャンパン1本無料</p>
+                                <div>
+                                    <a href="index.php" class="btn-ok ml-auto mr-auto">利用する</a>
+                                </div>
+                            </div>
+                        </div><!-- /box -->
+                        <div class="box innerBox bar">
+                            <div class="thumb"></div>
+                            <div class="info">
+                                <p class="font-weight-bold fz14 mb-0"><span class="ft-main">★</span><a href="store-bar.php">Bar Shinjuku</a></p>
+                                <p class="fz13 mb-0">・ドリンク1杯無料</p>
+                                <p class="fz13 mb-1">・シャンパン1本無料</p>
+                                <div>
+                                    <a href="index.php" class="btn-ok ml-auto mr-auto">利用する</a>
+                                </div>
+                            </div>
+                        </div><!-- /box -->
+                        <div class="box innerBox ramen">
+                            <div class="thumb"></div>
+                            <div class="info">
+                                <p class="font-weight-bold fz14 mb-0"><span class="ft-main">★</span><a href="store-ramen.php">東京ラーメン</a></p>
+                                <p class="fz13 mb-0">・3種類から1杯ラーメン無料</p>
+                                <div>
+                                    <a href="index.php" class="btn-ok ml-auto mr-auto">利用する</a>
+                                </div>
+                            </div>
+                        </div><!-- /box -->
+
+                        <div class="box innerBox este">
+                            <div class="thumb"></div>
+                            <div class="info">
+                                <p class="font-weight-bold fz14 mb-0"><span class="ft-main">★</span><a href="store-este.php">エステサロン</a></p>
+                                <p class="fz13 mb-0">・岩盤浴使い放題＋60分エステ無料%OFF</p>
+                                <p class="fz13 mb-0">・岩盤浴使い放題</p>
+                                <p class="fz13 mb-0">・60分エステ無料</p>
+                                <div>
+                                    <a href="index.php" class="btn-ok ml-auto mr-auto">利用する</a>
+                                </div>
+                            </div>
+                        </div><!-- /box -->
+                        <div class="box innerBox nail">
+                            <div class="thumb"></div>
+                            <div class="info">
+                                <p class="font-weight-bold fz14 mb-0"><span class="ft-main">★</span><a href="store-nail.php">Nail Salon Harajuku</a></p>
+                                <p class="fz13 mb-0">・ハンドジェルネイル＋オフ＋（ハンドスパorウォーターケア）</p>
+                                <div>
+                                    <a href="index.php" class="btn-ok ml-auto mr-auto">利用する</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>footer('./');</script>
+            </main>
+    </div><!-- /#wrapper -->
+    <script>
+        $(function(){
+            $('#mainNav li a').each(function(){
+                var $href = $(this).attr('href');
+                if(location.href.match($href)) {
+                    $(this).parent('li').addClass('current');
+                } else {
+                    $(this).parent('li').removeClass('current');
+                }
+            });
+        });
+    </script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script>
+        jQuery(function($){
+            $('#menu').slicknav();
+        });
+    </script>
+</body>
+</html>
