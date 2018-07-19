@@ -24,8 +24,8 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <plugin name="cordova-plugin-googlemaps" spec="^2.3.6">
-        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyC0RuqsZWNmpCSJTYHUCe0uQpiVqnIn-ms" />
-        <variable name="API_KEY_FOR_IOS" value="AIzaSyA9Ku59QV2djxcynXIVLIzPyXd-5CGvXY0" />
+        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyC2MWJKZYlF0nc0PxLGuYhCAWjveF6MQbA" />
+        <variable name="API_KEY_FOR_IOS" value="AIzaSyC2MWJKZYlF0nc0PxLGuYhCAWjveF6MQbA" />
         <variable name="PLAY_SERVICES_VERSION" value="15.0.1" />
         <variable name="ANDROID_SUPPORT_V4_VERSION" value="26.1.0" />
         <variable name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="This app wants to get your location while this app runs only." />
