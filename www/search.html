@@ -15,14 +15,31 @@
     <script src="js/index.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOJRJTbEWra_Wn8Rw1O09H0j81tK2AcNE&callback=initMap" async></script>
     <script>
+        var map;
+        var marker;
         function initMap() {
-            var mapPosition = {lat: 35.170662, lng: 136.923430}
-            var mapArea = document.getElementById('maps');
-            var mapOptions = {
-                center: mapPosition,
-                zoom: 16,
-            };
-            var map = new google.maps.Map(mapArea, mapOptions);
+            if(!navigator.geolocation){
+                consol.log("Geolocation API には対応してしておりません");
+                return false;
+            }
+            //現在地の取得
+            navigator.geolocation.getCurrentPosition(function (position) {
+                //緯度経度の取得
+                latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                //地図の作成
+                map = new google.maps.Map(document.getElementById('maps'), {
+                    center: latLng,
+                    zoom: 17
+                });
+                //マーカーの追加
+                marker = new google.maps.Marker({
+                    position: latLng,
+                    map: map
+                });
+            }, function () {
+               console.log('位置情報取得に失敗しました');
+            });
+
         }
     </script>
     <!-- fontawesome -->
